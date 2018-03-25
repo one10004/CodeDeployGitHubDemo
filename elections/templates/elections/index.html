@@ -4,11 +4,15 @@
     <title>GitWathcer</title>
 </head>
 <body>
-    <form>
+    <script type="text/javascript">
+        function open(url){
+            url += '/submit'
+            location.href(url)
+        }
+    </script>
+    <form method="post">
         <label>git repository url<input type="text" placeholder="git URL" id="url" name="url"></label><br>
-    </form>
-    <form action="DyingSwan/creativepoo/submit" method="post">
-        <button type="submit">submit</button>
+        <button type="submit" onclick="open(url)">submit</button>
     </form>
 </body>
 </html>
