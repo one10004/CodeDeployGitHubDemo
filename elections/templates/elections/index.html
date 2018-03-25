@@ -4,7 +4,11 @@
     <title>GitWathcer</title>
 </head>
 <body>
-    <script type="text/javascript">
+    
+        <label>git repository url       <input type="text" id="input"></label><br>
+        <button onclick="open()">submit</button>
+
+        <script type="text/javascript">
         function open(){
             var url = document.getElementById("input").value;
             url += '/submit';
@@ -12,7 +16,5 @@
             location.href(url)
         }
     </script>
-        <label>git repository url       <input type="text" id="input"></label><br>
-        <button onclick="open()">submit</button>
 </body>
 </html>
