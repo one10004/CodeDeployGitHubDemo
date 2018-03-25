@@ -10,10 +10,10 @@ def index(request):
 
 def gitwatch(request, address):
 	address = 'https://github.com/' + address
-	os.chdir('/home/ubuntu')
+	os.chdir('~')
 	call('git clone ' + address + '.git')
 	words = address.split('/')
 	length = len(words)
-	os.chdir('/home/ubuntu/' + words[length-1])
+	os.chdir('~/' + words[length-1])
 	call('python3 home/ubuntu/gitinspector/gitinspector.py -F html > home/ubuntu/CodeDeployGitHubDemo/elections/templates/elections/statistics.html')
 	return render(request, 'elections/statistics.html')
