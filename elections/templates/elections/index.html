@@ -6,12 +6,13 @@
 <body>
     
         <label>git repository url       <input type="text" id="input"></label><br>
+        <textarea id="output"></textarea>
         <button onclick="open()">submit</button>
 
         <script type="text/javascript">
         function open(){
-            alert(url)
             var url = document.getElementById("input").value;
+            document.getElementById("output") = url;
             url += '/submit';
             alert(url)
             location.href(url)
