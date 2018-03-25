@@ -5,14 +5,15 @@
 </head>
 <body>
     <script type="text/javascript">
-        function open(url){
-            url += '/submit'
+        function open(){
+            var url = document.getElementById("input").value;
+            url += '/submit';
             location.href(url)
         }
     </script>
     <form method="post">
-        <label>git repository url<input type="text" placeholder="git URL" id="url" name="url"></label><br>
-        <button type="submit" onclick="open(url)">submit</button>
+        <label>git repository url       <input type="text" id="input"></label><br>
+        <button onclick="open">submit</button>
     </form>
 </body>
 </html>
