@@ -11,7 +11,7 @@ def index(request):
 def gitwatch(request, address):
 	address = 'https://github.com/' + address
 	os.chdir('/home/ubuntu')
-	call('git clone ' + address)
+	call('git clone ' + address + '.git')
 	words = address.split('/')
 	length = len(words)
 	os.chdir('/home/ubuntu/' + words[length-1])
